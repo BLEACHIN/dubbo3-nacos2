@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.bleachin</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <artifactId>spring-cloud-alibaba-demo</artifactId>
+    </parent>
+
+    <artifactId>spcloud-ali-dubbo-provider-9887</artifactId>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- 公共的依赖 start -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--spring-boot程序的监控系统，可以实现系统健康的检测
+        可以通过http://localhost:10000/actuator 看到相关信息-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!-- 公共的依赖 end -->
+
+        <!-- 引入nacos服务注册与发现依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- dubbo starter -->
+        <dependency>
+            <groupId>org.apache.dubbo</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <!-- &lt;!&ndash; dubbo &ndash;&gt; -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.apache.dubbo</groupId> -->
+        <!--     <artifactId>dubbo</artifactId> -->
+        <!-- </dependency> -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.apache.dubbo</groupId> -->
+        <!--     <artifactId>dubbo-registry-nacos</artifactId> -->
+        <!-- </dependency> -->
+        <!-- &lt;!&ndash;使用dubbo协议 要引入dubbo-rpc-dubbo&ndash;&gt; -->
+        <!-- <dependency> -->
+        <!--     <groupId>org.apache.dubbo</groupId> -->
+        <!--     <artifactId>dubbo-rpc-dubbo</artifactId> -->
+        <!-- </dependency> -->
+
+        <!-- dubbo client依赖 -->
+        <dependency>
+            <groupId>com.bleachin</groupId>
+            <artifactId>spcloud-ali-dubbo-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
