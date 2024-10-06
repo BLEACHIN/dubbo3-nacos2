@@ -270,7 +270,8 @@ dubbo:
   application:
     name: spcloud-ali-dubbo-provider-9887-dubbo #dubbo服务名
   protocol:
-    name: dubbo #协议名称
+    #name: dubbo #协议名称
+    name: tri #协议名称，triple协议填写的是tri，不是triple
     #host: localhost #本机ip地址
     #协议端口，指定dubbo服务的tcp端口
     #默认为20880，设置-1表示从20880开始自增端口，避免端口冲突
@@ -423,16 +424,17 @@ server:
   port: 9886
 spring:
   application:
-    name: spcloud-ali-dubbo-provider-9886
+    name: spcloud-ali-dubbo-consumer-9886
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848 #配置 Nacos 地址
 dubbo:
   application:
-    name: spcloud-ali-dubbo-provider-9886-dubbo #dubbo服务名
+    name: spcloud-ali-dubbo-consumer-9886-dubbo #dubbo服务名
   protocol:
-    name: dubbo #协议名称
+    #name: dubbo #协议名称
+    name: tri #协议名称，triple协议填写的是tri，不是triple
     #host: localhost #本机ip地址
     #协议端口，指定dubbo服务的tcp端口
     #默认为20880，设置-1表示从20880开始自增端口，避免端口冲突
