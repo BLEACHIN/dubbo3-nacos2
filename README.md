@@ -481,7 +481,8 @@ public class SpCloudAliDubboCons9886Application {
 }
 ```
 
-启动nacos server，spcloud-ali-dubbo-provider-9887，spcloud-ali-dubbo-consumer-9886。
+依次启动nacos server，spcloud-ali-dubbo-provider-9887，spcloud-ali-dubbo-consumer-9886。
 
 浏览器访问：http://localhost:9886/hello?name=123
-远程调用成功 获得结果: 你好啊 123
+![image](https://github.com/user-attachments/assets/5de20319-3e73-443e-9ced-2868b442dbc2)
+
