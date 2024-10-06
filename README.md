@@ -484,5 +484,8 @@ public class SpCloudAliDubboCons9886Application {
 依次启动nacos server，spcloud-ali-dubbo-provider-9887，spcloud-ali-dubbo-consumer-9886。
 
 浏览器访问：http://localhost:9886/hello?name=123
-![image](https://github.com/user-attachments/assets/5de20319-3e73-443e-9ced-2868b442dbc2)
+界面如下：
+![image](https://github.com/user-attachments/assets/62027cfe-dc32-4820-8864-12f01ffe5759)
+
+
 
